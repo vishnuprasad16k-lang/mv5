@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Manya ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: black;
+      color: red;
+      text-align: center;
+    }
+
+    .page {
+      display: none;
+      padding: 50px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background: red;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: white;
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    img {
+      width: 250px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px red;
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+  <h1>Hey Manya 💫</h1>
+  <p>I made something for you… 🥺</p>
+  <button onclick="nextPage(2)">Click to Continue ❤️</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <h2>For You 💖</h2>
+
+  <p>
+  Hey Manya… 💫<br><br>
+
+  Naanu yen helbeku antha gothagta illa… but neenu nan life alli tumba special 🥺  
+  You are not just my best friend… neenu nan strength 💯 <br><br>
+
+  Ninna jothe iruvaga yen problem iralla anisutte 😄  
+  Ninna smile nodidre nan day full set agutte ❤️ <br><br>
+
+  Sometimes naanu express madalla… but just remember this —  
+  Neenu nanage tumba important 💖  
+  </p>
+
+  <button onclick="nextPage(3)">One More Thing 👉</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <h1>Just One Last Thing… ❤️</h1>
+
+  <p>
+  No matter what happens… <br>
+  Neenu always nan best friend 💫 <br><br>
+
+  Thank you for coming into my life Manya 🥺  
+  Stay the same… always ❤️
+  </p>
+
+  <!-- IMAGE -->
+  <img src="file:///C:/Users/vishn/Downloads/f1.jpeg" alt="Manya">
+
+  <div class="heart">❤️</div>
+
+  <h2>Forever Yours 💌</h2>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+  let pages = document.querySelectorAll(".page");
+  pages.forEach(p => p.classList.remove("active"));
+
+  document.getElementById("page" + pageNumber).classList.add("active");
+}
+</script>
+
+</body>
+</html>
